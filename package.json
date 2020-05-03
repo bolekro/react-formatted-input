@@ -10,7 +10,7 @@
     "build": "babel source --out-dir dist",
     "format": "prettier --write '{source,test}/**/*.js'",
     "prepublish": "npm run build",
-    "postinstall": "npm run build",
+    "postinstall": "npm install && npm run build",
     "test": "npm run test:specs && npm run test:format",
     "test:format": "prettier-check '{source,test}/**/*.js'",
     "test:specs": "jest"
